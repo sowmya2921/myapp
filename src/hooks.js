@@ -1,4 +1,4 @@
-import React from "react";
+ import React from "react";
 export function useCounter(){
     var [count,setCount] = React.useState(0)
     function inc(){
