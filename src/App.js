@@ -12,13 +12,20 @@ import ConditionalClass from './ConditionalClass';
 import Todolistwithstatus from './Todolistwithstatus';
 import CounterClass from './CounterClass';
 import TodolistClass from './TodolistClass';
+import ClassComponentLifeCycle from './ClassComponentLifeCycles';
+import ClassComponentLifeCycle2 from './ClassComponentLifeCycle2';
 
 
 function App() {
   const [firstname,SetFirstname] = React.useState('sowmya')
+  React.useEffect(()=>{
+    console.log("App component Mounted")
+  })
   return (
     <MyContext.Provider value="Deepu">
     <div className="betterview">
+      <ClassComponentLifeCycle2></ClassComponentLifeCycle2>
+      <ClassComponentLifeCycle></ClassComponentLifeCycle>
       <TodolistClass></TodolistClass>
       <CounterClass></CounterClass>
       <Todolistwithstatus></Todolistwithstatus>
